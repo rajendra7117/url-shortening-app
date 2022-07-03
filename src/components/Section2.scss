@@ -1,0 +1,41 @@
+.section-2{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .main-form{
+        width: 40rem;
+        padding: 2rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        input{
+            width: 90%;
+            padding: 1rem;
+            border-radius: 0.5rem;
+
+        }
+        button{
+            width: 9rem;
+            padding: 1rem;
+            border-radius: 0.5rem;
+        }
+    }
+    .url-container{
+        width: 40rem;
+        display: flex;
+        
+        align-items: center;
+        justify-content: center;
+        height: auto;
+        border: 1px solid #000;
+        border-radius: 1rem;
+        padding: 1rem;
+        a{
+            margin-top: 1rem;
+        }
+    }
+}
