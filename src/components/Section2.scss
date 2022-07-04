@@ -1,3 +1,4 @@
+@import 'Variables';
 .section-2{
     width: 100%;
     height: auto;
@@ -31,7 +32,7 @@
         align-items: center;
         justify-content: center;
         height: auto;
-        border: 1px solid #000;
+        border: 1px solid $black;
         border-radius: 1rem;
         padding: 1rem;
         a{

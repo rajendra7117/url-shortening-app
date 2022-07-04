@@ -1,13 +1,16 @@
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
+import { Context } from "../Context/Context";
 
  const useHttp = () => {
 
     const [status, setStatus] = useState<string>('normal')
+    const ctx = useContext(Context)
     // const [status, setStatus] = useState<string>('')
     const fetchAPI = async(url: String) => {
-        console.log('fet')
+        ctx.toggleLoading()
         setStatus('loading')
+        ctx.clearError()
         try{
             const res= await fetch(`https://api.shrtco.de/v2/shorten?url=${url}`)
             if(res.status!==201){
@@ -20,11 +23,12 @@ import React, { useState, useEffect } from "react";
            
             if(data){
                 setStatus('success')
+                ctx.toggleLoading()
                return data.result.short_link
             }
         }
         catch(err){
-
+            ctx.clearError()
         }
      
        
