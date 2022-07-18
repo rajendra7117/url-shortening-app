@@ -6,25 +6,56 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    .main-form{
-        width: 40rem;
-        padding: 2rem;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
-        input{
-            width: 90%;
-            padding: 1rem;
-            border-radius: 0.5rem;
-
+    
+   
+   
+    .form-div{
+        width: 80%;
+        background-color: hsl(257, 27%, 26%);
+        margin-inline: auto ;
+        position: relative;
+        border-radius: 0.5rem !important;
+        overflow: hidden !important;
+        height: 7rem;
+        svg{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 7rem !important;
+            z-index: 1 !important;
         }
-        button{
-            width: 9rem;
-            padding: 1rem;
-            border-radius: 0.5rem;
+        .main-form{
+            width: 40rem;
+            padding: 2rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-around;
+           
+            margin-inline:auto ;
+            input{
+                width: 90%;
+                padding: 1rem;
+                border-radius: 0.5rem;
+                z-index: 100 !important;
+                outline: none !important;
+    
+            }
+            button{
+                width: 9rem;
+                padding: 1rem;
+                border-radius: 0.5rem;
+                background-color: hsl(180, 66%, 49%);
+                color: #fff;
+                border: 1px solid hsl(180, 66%, 49%);
+                border-radius: 1rem;
+                z-index: 10;
+                margin-left: 0.5rem;
+          
+            }
         }
     }
+   
     .url-container{
         width: 40rem;
         display: flex;
@@ -32,7 +63,7 @@
         align-items: center;
         justify-content: center;
         height: auto;
-        border: 1px solid $black;
+        border: 1px solid $fullBlack;
         border-radius: 1rem;
         padding: 1rem;
         a{

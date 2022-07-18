@@ -1,4 +1,5 @@
-@import 'Variables';
+@import '_Variables';
+$white: #fff;
 .header{
     width: 100%;
     height: 8rem;
@@ -41,13 +42,22 @@
             flex-direction: row;
             justify-content: space-around;
             align-items: center;
+           
             button{
                 height: auto;
                 width: 6rem;
-                background-color: $black;
+                background-color: #fff;
                 border: none;
                 font-weight: 700;
                 opacity: 0.5;
+                cursor: pointer;
+                padding: 0.4rem;
+            }
+            button:hover{
+                background-color: hsl(180, 66%, 49%);
+                color: #fff;
+                border: 1px solid hsl(180, 66%, 49%);
+                border-radius: 1rem;
             }
         }
     }
