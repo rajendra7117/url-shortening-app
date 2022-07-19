@@ -2,19 +2,19 @@
 import React from 'react'
 import './Card.scss'
 // import * as logo from '../images/icon-brand-recognition.svg'
-const logo: string = require("../images/icon-brand-recognition.svg").default;
 
-const Card = () => {
+
+
+const Card:React.FC<{img: string, heading: string, text: string}> = ({img, heading, text}) => {
   return (
     <div className="card">
         <div className='img-div'>
-    <img src={logo}/>
+    <img src={img}/>
         </div>
      
-          <h3>Detailed Records</h3>
+          <h3>{heading}</h3>
           <p>
-            Gain insights into who is clicking your links. Knowing when and
-            where people engage with your content helps inform better decisions.
+            {text}
           </p>
         </div>
   )

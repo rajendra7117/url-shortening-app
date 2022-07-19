@@ -1,6 +1,7 @@
 import React from "react";
 import "./Section3.scss";
 import Card from "./Card";
+const logo: string = require("../images/icon-brand-recognition.svg").default;
 const Section3 = () => {
   return (
     <div className="section-3">
@@ -12,7 +13,12 @@ const Section3 = () => {
         </p>
       </div>
       <div className="part-2">
-        <Card />
+        <Card img={logo} heading="Detailed Records" text=" Gain insights into who is clicking your links. Knowing when and
+            where people engage with your content helps inform better decisions."/>
+             <Card img={logo} heading="Detailed Records" text=" Gain insights into who is clicking your links. Knowing when and
+            where people engage with your content helps inform better decisions."/>
+             <Card img={logo} heading="Detailed Records" text=" Gain insights into who is clicking your links. Knowing when and
+            where people engage with your content helps inform better decisions."/>
         {/* <div className="card-1">
           <h3>Brand Recognition</h3>
           <p>
