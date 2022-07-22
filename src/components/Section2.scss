@@ -16,14 +16,12 @@
         position: relative;
         border-radius: 0.5rem !important;
         overflow: hidden !important;
+        background-image: url('../images//bg-shorten-desktop.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top;
         height: 7rem;
-        svg{
-            position: absolute;
-            left: 0;
-            top: 0;
-            height: 7rem !important;
-            z-index: 1 !important;
-        }
+       
         .main-form{
             width: 40rem;
             padding: 2rem;

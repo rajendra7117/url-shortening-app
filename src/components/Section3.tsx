@@ -2,6 +2,9 @@ import React from "react";
 import "./Section3.scss";
 import Card from "./Card";
 const logo: string = require("../images/icon-brand-recognition.svg").default;
+const logo2: string = require("../images/icon-fully-customizable.svg").default;
+const logo3: string = require("../images/icon-detailed-records.svg").default;
+
 const Section3 = () => {
   return (
     <div className="section-3">
@@ -13,33 +16,24 @@ const Section3 = () => {
         </p>
       </div>
       <div className="part-2">
-        <Card img={logo} heading="Detailed Records" text=" Gain insights into who is clicking your links. Knowing when and
-            where people engage with your content helps inform better decisions."/>
-             <Card img={logo} heading="Detailed Records" text=" Gain insights into who is clicking your links. Knowing when and
-            where people engage with your content helps inform better decisions."/>
-             <Card img={logo} heading="Detailed Records" text=" Gain insights into who is clicking your links. Knowing when and
-            where people engage with your content helps inform better decisions."/>
-        {/* <div className="card-1">
-          <h3>Brand Recognition</h3>
-          <p>
-            Boost your brand recognition with each click. Generic links don’t
-            mean a thing. Branded links help instil confidence in your content.
-          </p>
-        </div>
-        <div className="card-2">
-          <h3>Detailed Records</h3>
-          <p>
-            Gain insights into who is clicking your links. Knowing when and
-            where people engage with your content helps inform better decisions.
-          </p>
-        </div>
-        <div className="card-3">
-          <h3>Fully Customizable</h3>
-          <p>
-            Improve brand awareness and content discoverability through
-            customizable links, supercharging audience engagement.
-          </p>
-        </div> */}
+        <Card
+          img={logo}
+          heading="Brand Recognition"
+          text="Boost your brand recognition with each click. Generic links don’t
+            mean a thing. Branded links help instil confidence in your content."
+        />
+        <Card
+          img={logo2}
+          heading="Detailed Records"
+          text=" Gain insights into who is clicking your links. Knowing when and
+            where people engage with your content helps inform better decisions."
+        />
+        <Card
+          img={logo3}
+          heading="Fully Customizable"
+          text="Improve brand awareness and content discoverability through
+            customizable links, supercharging audience engagement."
+        />
       </div>
     </div>
   );

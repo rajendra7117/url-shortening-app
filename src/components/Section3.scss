@@ -31,8 +31,15 @@
         align-items: flex-start;
         justify-content: center;
         text-align: left;
+        .img-div{
+            width: 3rem;
+            img{
+                width: 2rem;
+            }
+        }
         div{
             height: 3rem;
+            
         }
         p{
             width: 90%;

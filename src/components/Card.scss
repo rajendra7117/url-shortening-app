@@ -14,6 +14,9 @@
         left: 1rem;
         top: -2rem;
         background-color: hsl(257, 27%, 26%);
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
 
        
         width: 2.5rem !important;
@@ -21,8 +24,9 @@
 
         border-radius: 50% !important;
         img{
-            width: 90% !important;
-            height: 90% !important;
+            width: 80% !important;
+            height: 80% !important;
+            align-self: center;
         }
 
     }
