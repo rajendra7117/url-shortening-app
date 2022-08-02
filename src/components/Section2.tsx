@@ -7,7 +7,6 @@ const Section2 = () => {
   return (
     <div className="section-2">
       <div className="form-div">
-        
         <Form />
       </div>
       <UrlContainer />

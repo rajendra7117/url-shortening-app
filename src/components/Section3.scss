@@ -1,3 +1,5 @@
+@import 'Variables';
+
 .section-3{
     display: flex;
     flex-direction: column;
@@ -31,12 +33,7 @@
         align-items: flex-start;
         justify-content: center;
         text-align: left;
-        .img-div{
-            width: 3rem;
-            img{
-                width: 2rem;
-            }
-        }
+        
         div{
             height: 3rem;
             
@@ -71,4 +68,35 @@
     grid-area: 3/5/4/6;
  
    }
+}
+
+@media screen and (max-width: 560px) {
+   .section-3{
+    .part-1{
+        width: 100%;
+        text-align: center;
+        h1{
+            margin: 0 !important;
+            font-size: 1.6rem;
+
+        }
+        p{
+            width: 90%;
+            text-align: center;
+        }
+    }
+    .part-2{
+        width: 100% !important;
+        margin: 0 !important;
+        margin-top: 2rem !important;
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        div:nth-child(5){
+            .line{
+                display: none !important;
+            }
+        }
+    }
+   } 
 }

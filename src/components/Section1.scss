@@ -1,3 +1,6 @@
+@import 'Variables';
+@import 'Buttons';
+
 .section-1{
     display: flex;
     flex-direction: row;
@@ -20,13 +23,47 @@
         button{
             align-self: flex-start;
             margin-top: 0.3rem;
-            background-color: hsl(180, 66%, 49%);
-            color: #fff;
-            border: 1px solid hsl(180, 66%, 49%);
-            padding: 0.4rem;
-            border-radius: 1rem;
-            font-weight: 700;
-            cursor: pointer;
+            @include button2();
+        }
+    }
+}
+
+@media screen and (max-width:560px) {
+    .section-1{
+        flex-direction: column-reverse;
+        .part-2{
+            width: 95%;
+            img{
+                width: 97%;
+                height: 17rem;
+            }
+        }
+        .part-1{
+            width: 92%;
+            flex-direction: column;
+            text-align: center !important;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 16rem;
+            button{
+                align-self: center;
+                width: 10rem;
+                padding: 0.6rem;
+                font-weight: 800;
+            }
+        
+            h1{
+                width: 100% !important;
+                font-size: 2.1rem;
+                text-align: center !important;
+            }
+            p{
+                padding: 0.3rem;
+                width: 90%;
+                text-align: center;
+                font-size: 1rem;
+            }
         }
     }
 }

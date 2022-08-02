@@ -1,5 +1,6 @@
-@import '_Variables';
-$white: #fff;
+@import 'Variables';
+@import 'Buttons';
+
 .header{
     width: 100vw;
     height: 8rem;
@@ -7,6 +8,9 @@ $white: #fff;
     display: flex;
     flex-direction: row;
     align-items: center;
+    .menu-icon{
+        display: none;
+    }
     h1{
         margin-left: 10rem !important;
         font-size: 1.1rem;
@@ -44,21 +48,107 @@ $white: #fff;
             align-items: center;
            
             button{
-                height: auto;
-                width: 6rem;
-                background-color: #fff;
-                border: none;
-                font-weight: 700;
-                opacity: 0.5;
-                cursor: pointer;
-                padding: 0.4rem;
+               @include button1();
             }
             button:hover{
-                background-color: hsl(180, 66%, 49%);
-                color: #fff;
-                border: 1px solid hsl(180, 66%, 49%);
+                background-color: $cyan;
+                color: $white;
+                border: 1px solid $cyan;
                 border-radius: 1rem;
             }
         }
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .header{
+        padding: 0.1rem !important;
+        .menu-icon{
+            display: block;
+            position: absolute;
+            right: 0.4rem;
+            font-size: 2.2rem;
+            color: $grey;
+            cursor: pointer;
+        }
+        h1{
+            margin: 0 !important;
+            margin-left: 0.9rem !important;
+           
+            font-size: 2rem !important;
+        }
+     
+        nav{
+            display: none;
+            width: 90% !important;
+            position: absolute;
+            flex-direction: column !important;
+            align-items: center;
+            justify-content: space-around;
+            top: 7.5rem;
+            height: 17rem;
+            background-color: $violet;
+            left: 1rem;
+            border-radius: 0.5rem;
+            animation: pop 1s  !important;
+            ul{
+                flex-direction: column;
+                width: 85%;
+                align-items: center;
+                padding: 0 !important;
+                justify-content: space-around;
+                height: 8rem;
+                border-bottom: 1px solid #fff;
+                li{
+                    font-size: 1.1rem;
+                    color: $white;
+                    opacity: 1;
+                    font-weight: 700;
+                    
+                }
+                li:nth-child(3){
+                    margin-bottom: 0.5rem !important;
+                }
+            }
+            div{
+                margin: 0 !important;
+                flex-direction: column !important;
+                align-items: center !important;
+                width: 100% !important;
+                text-align: center;
+                background-color: $violet !important;
+               
+                button{
+                    width: 80% !important;
+                    text-align: center !important;
+
+                }
+                button:nth-child(1){
+                    background-color: $violet !important;
+                    color: $white;
+                    opacity: 1;
+                    font-size: 1rem;
+                }
+                button:nth-child(2){
+                   @include button2();
+                   opacity: 1;
+                   font-size: 1rem;
+                }
+            }
+        }
+        nav.active{
+            display: flex;
+         
+        }
+
+    }
+}
+
+@keyframes pop {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }

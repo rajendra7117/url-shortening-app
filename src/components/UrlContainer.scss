@@ -1,10 +1,52 @@
+@import 'Variables';
+@import 'Buttons';
 .url-container{
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-top: 1rem;
+    border: none;
 }
-ul{
+.url-list{
     list-style: none;
+    li{
+        width: 60rem;
+        background-color: $white;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        padding: 0.4rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        margin-top: 0.5rem;
+        border-radius: 0.2rem;
+
+        input{
+            border: none;
+           min-width: 20rem;
+           max-width: auto;
+            outline: none;
+            cursor: auto;
+            font-weight: 700;
+        }
+
+        div{
+           
+            width: 17rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+       
+        a{
+            text-decoration: none;
+            color: $cyan;
+        }
+        button{
+            @include button2();
+        }
+    }
 }

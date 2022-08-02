@@ -61,3 +61,29 @@
     }
 
 }
+
+@media screen and (max-width: 560px) {
+    .footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        div{
+            height: auto !important;
+        }
+        .details{
+           text-align: center;
+           width: 15rem !important;
+           align-items: center;
+           div{
+            width: 8rem;
+            align-items: center;
+            text-align: center;
+           }
+        }
+        .icons{
+            width: 15rem;
+            margin-bottom: 2rem;
+        }
+    }
+}

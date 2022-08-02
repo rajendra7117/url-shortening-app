@@ -1,4 +1,6 @@
 @import 'Variables';
+
+@import 'Buttons';
 .section-2{
     width: 100%;
     height: auto;
@@ -11,7 +13,7 @@
    
     .form-div{
         width: 80%;
-        background-color: hsl(257, 27%, 26%);
+        background-color: $violet;
         margin-inline: auto ;
         position: relative;
         border-radius: 0.5rem !important;
@@ -40,13 +42,10 @@
     
             }
             button{
+              
+                @include button2();
                 width: 9rem;
                 padding: 1rem;
-                border-radius: 0.5rem;
-                background-color: hsl(180, 66%, 49%);
-                color: #fff;
-                border: 1px solid hsl(180, 66%, 49%);
-                border-radius: 1rem;
                 z-index: 10;
                 margin-left: 0.5rem;
           
@@ -54,18 +53,34 @@
         }
     }
    
-    .url-container{
-        width: 40rem;
-        display: flex;
-        
-        align-items: center;
-        justify-content: center;
-        height: auto;
-        border: 1px solid $fullBlack;
-        border-radius: 1rem;
-        padding: 1rem;
-        a{
-            margin-top: 1rem;
+}
+
+@media screen and (max-width: 560px) {
+    .section-2{
+        .form-div{
+            width: 90%;
+            height: auto;
+            .main-form{
+                width: 100%;
+                flex-direction: column;
+                justify-content: center !important;
+                padding: 0 !important;
+                height: 10rem;
+               
+                input{
+                    width: 80% !important;
+                    padding: 0.9rem;
+                   
+                }
+                button{
+                    margin-top: 0.3rem;
+                    width: 90%;
+                    border-radius: 0.2rem;
+                    margin-right: 0.2rem;
+                }
+            }
         }
     }
+    
+   
 }
