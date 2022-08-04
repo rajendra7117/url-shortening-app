@@ -33,6 +33,7 @@
             justify-content: space-around;
            
             margin-inline:auto ;
+            position: relative;
             input{
                 width: 90%;
                 padding: 1rem;
@@ -40,6 +41,19 @@
                 z-index: 100 !important;
                 outline: none !important;
     
+            }
+            input.error-class{
+                border: 1px solid $red;
+            }
+            input.error-class::placeholder{
+                color: $red !important;
+            }
+            .error-text{
+                color: $red;
+                position: absolute;
+                bottom: 0.3rem;
+                left: 2rem;
+               margin: 0 !important;
             }
             button{
               
@@ -70,8 +84,13 @@
                 input{
                     width: 80% !important;
                     padding: 0.9rem;
+                    outline: none;
                    
                 }
+                .error-text{
+                    position: static;
+                }
+              
                 button{
                     margin-top: 0.3rem;
                     width: 90%;

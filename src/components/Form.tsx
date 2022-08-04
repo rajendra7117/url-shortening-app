@@ -5,6 +5,7 @@ import { Context } from "../Context/Context";
 
 const Form: React.FC = () => {
   const [enteredInput, setEnteredInput] = useState<string>("");
+  const [error, setError] = useState<boolean>();
   const ctx = useContext(Context);
   let id: String = uuidv4();
 
@@ -12,9 +13,14 @@ const Form: React.FC = () => {
 
   const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
     setEnteredInput(e.target.value);
+    setError(false)
   };
   const submitHandler = async (event: React.FormEvent<HTMLElement>) => {
     event.preventDefault();
+    if(enteredInput===""){
+      setError(true)
+      return
+    }
 
     try {
       const response = await fetchFunc(enteredInput);
@@ -33,7 +39,9 @@ const Form: React.FC = () => {
         placeholder="Shorten a link here"
         onChange={handleInput}
         value={enteredInput}
+        className={`${error && 'error-class'}`}
       />
+      {error && <p className="error-text">please add a link</p>}
       <button>Shorten it</button>
     </form>
   );

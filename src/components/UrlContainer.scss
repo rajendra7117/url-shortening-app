@@ -50,3 +50,24 @@
         }
     }
 }
+
+@media screen and (max-width:560px) {
+    .url-list{
+        padding: 0;
+        width: 100%;
+        li{
+            width: 100%;
+            flex-direction: column;
+            padding: 0.2rem;
+            height: auto;
+            input{
+                width: 5rem;
+                
+            }
+            div{
+                flex-direction: column;
+                height: 4rem;
+            }
+        }
+    }
+}

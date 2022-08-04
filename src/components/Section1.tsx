@@ -1,5 +1,5 @@
 import React from "react";
-import './Section1.scss'
+import "./Section1.scss";
 const img: string = require("../images/illustration-working.svg").default;
 const section1 = () => {
   return (
@@ -15,7 +15,7 @@ const section1 = () => {
         <button>Get Started</button>
       </div>
       <div className="part-2">
-        <img src={img}/>
+        <img src={img} />
       </div>
     </div>
   );
